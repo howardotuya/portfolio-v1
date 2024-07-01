@@ -4,7 +4,7 @@ import Link from "next/link";
 import bg from "@/public/bg1.jpg";
 import menu from "@/public/hamburger-menu.svg";
 import mockup1 from "@/public/mockup1.svg";
-import mockup2 from "@/public/mockup2.svg";
+import mockup2 from "@/public/mockup2.png";
 
 export default function Home() {
   return (
@@ -56,6 +56,7 @@ export default function Home() {
                 src={mockup2}
                 alt=""
                 fill
+                unoptimized={true}
               />
             </div>
 
