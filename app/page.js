@@ -23,9 +23,12 @@ export default function Home() {
             TRANSFORMING YOUR WEBSITE DREAMS INTO A DIGITAL REALITY.
           </h1>
 
-          <div>
-            <h6></h6>
-            <button></button>
+          <div className="mt-[51px]">
+            <h6>
+              Experience bespoke software solutions crafted with precision and
+              care.
+            </h6>
+            <button>Start a Project</button>
           </div>
         </div>
       </Container>
