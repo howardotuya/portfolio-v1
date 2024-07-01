@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
+  scroll-behavior: smooth;
 }
 
+.setbody {
+  @apply flex flex-col w-full items-center;
+}
+
+.setbody > div {
+  @apply w-full h-full;
+}
 .headerBackground {
   background: var(
     --lil,
