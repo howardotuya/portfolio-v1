@@ -56,7 +56,6 @@ export default function Home() {
                 src={mockup2}
                 alt=""
                 fill
-                unoptimized={true}
               />
             </div>
 
