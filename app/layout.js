@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { Inter, Cutive_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const cutive = Cutive_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-cutive",
+});
 
 export const metadata = {
   title: "Howard Otuya",
@@ -15,7 +20,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${cutive.variable}`}>{children}</body>
     </html>
   );
 }

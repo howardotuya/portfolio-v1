@@ -1,10 +1,12 @@
 import Container from "@/components/container";
 import Image from "next/image";
 import Link from "next/link";
-import bg from "@/public/bg1.jpg";
+import bg from "@/public/bg2.jpg";
 import menu from "@/public/hamburger-menu.svg";
 import mockup1 from "@/public/mockup1.svg";
 import mockup2 from "@/public/mockup2.svg";
+import ProjectCard from "@/components/projectCard";
+import ProjectContainer from "@/components/projectContainer";
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
             <Link href={""}>Contact</Link>
           </nav>
 
-          <h6 className="text-[24px] leading-[32px] tracking-[-1.92px] text-[#444]">
+          <h6 className="text-[24px] leading-[32px] tracking-[-1.92px] text-[#444] lowercase">
             Howard Otuya
           </h6>
 
@@ -42,7 +44,7 @@ export default function Home() {
 
         <div className="w-full bg-[#C1A58D] h-[1px]"></div>
 
-        <div className="mt-6 mb-14 md:mb-8 w-full h-[419px] md:h-[724px] overflow-hidden rounded-[10px]">
+        <div className="mt-6 md:mb-14 mb-8 w-full h-[419px] md:h-[724px] overflow-hidden rounded-[10px]">
           <div className="w-full h-full relative grid z-[10] overflow-hidden pt-8 pl-8 md:pt-[96px] md:pl-[96px]">
             <div className="h-full w-full flex relative z-[1]">
               <Image
@@ -60,9 +62,9 @@ export default function Home() {
             </div>
 
             <div className="absolute top-0 h-full w-full">
-              <div className="w-[4096px] relative h-full overflow-hidden">
+              <div className="w-[2048px] md:w-[4096px] relative h-full overflow-hidden">
                 <Image
-                  className="absolute w-[4096px] h-[2731px] left-[-1568px] bottom-[-896px]"
+                  className="absolute w-[2048px] h-[1365.5px] md:w-[4096px] md:h-[2731px] left-[-646px] bottom-[-72px] md:left-[-1568px] md:bottom-[-896px]"
                   src={bg}
                   alt=""
                   placeholder="blur"
@@ -72,6 +74,22 @@ export default function Home() {
           </div>
         </div>
       </Container>
+
+      <Container innerStyle={"pt-16 pb-[72px]"} style={"bg-white"}>
+        <div>
+          <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.48px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
+            With 5+ years of expertise in frontend development, I transform
+            creative designs into flawless, user-friendly web experiences.{" "}
+            <span className="md:hidden">
+              <br />
+            </span>
+            <span className="headerBackground">Let’s collaborate</span> to bring
+            your digital projects to life with precision and efficiency.
+          </h6>
+        </div>
+      </Container>
+
+      <ProjectContainer />
     </>
   );
 }

@@ -6,7 +6,18 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        cutive: ["var(--font-cutive)"],
+      },
+      colors: {
+        mono: {
+          200: "#6C6D6D",
+          900: "#0A0B0C",
+        },
+      },
+    },
   },
   plugins: [],
 };
