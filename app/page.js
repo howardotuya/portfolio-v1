@@ -76,7 +76,7 @@ export default function Home() {
       </Container>
 
       <Container innerStyle={""} style={"bg-white"}>
-        <div className="pt-[72px] pb-10 md:pt-16 md:pb-[72px] md:text-center">
+        <div className="pt-14 pb-10 md:pt-16 md:pb-[72px] md:text-center">
           <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] text-[20px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.8px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
             With 5+ years of expertise in frontend development, I transform
             creative designs into flawless, user-friendly web experiences.{" "}
@@ -85,7 +85,7 @@ export default function Home() {
           </h6>
         </div>
 
-        <div className="bg-[#C1A58D] h-[1px] w-full"></div>
+        <div className="hidden md:block bg-[#C1A58D] h-[1px] w-full"></div>
       </Container>
 
       <ProjectContainer />
