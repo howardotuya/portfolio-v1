@@ -77,7 +77,7 @@ export default function Home() {
 
       <Container innerStyle={"pt-16 pb-[72px]"} style={"bg-white"}>
         <div>
-          <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] text-[20px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.8px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
+          <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.8px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
             With 5+ years of expertise in frontend development, I transform
             creative designs into flawless, user-friendly web experiences.{" "}
             <span className="md:hidden">
