@@ -76,7 +76,7 @@ function ProjectContainer() {
   ];
 
   return (
-    <Container innerStyle={"max-w-[1312px]"} style={"bg-white mt-8 md:mt-14"}>
+    <Container innerStyle={"max-w-[1312px]"} style={"bg-white"}>
       <div>
         {items.map((item, index) => (
           <>

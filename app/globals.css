@@ -37,7 +37,7 @@ body {
 }
 
 .divider:last-of-type {
-  display: hidden;
+  display: none;
 }
 
 @layer utilities {

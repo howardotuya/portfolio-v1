@@ -75,9 +75,9 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container innerStyle={"pt-16 pb-[72px]"} style={"bg-white"}>
-        <div>
-          <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.8px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
+      <Container innerStyle={""} style={"bg-white"}>
+        <div className="py-10 md:pt-16 md:pb-[72px] md:text-center">
+          <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] md:text-[40px] leading-[172.5%] md:leading-[150%] tracking-[-0.48px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
             With 5+ years of expertise in frontend development, I transform
             creative designs into flawless, user-friendly web experiences.{" "}
             <span className="md:hidden">
@@ -87,6 +87,8 @@ export default function Home() {
             your digital projects to life with precision and efficiency.
           </h6>
         </div>
+
+        <div className="bg-[#C1A58D] h-[1px] w-full"></div>
       </Container>
 
       <ProjectContainer />
