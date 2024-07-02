@@ -6,7 +6,7 @@ import mockup2 from "@/public/mockup2.svg";
 
 function ProjectCard({ title, body, dependencies, desktop, mobile, style }) {
   return (
-    <div className="first:pt-8 pt-11 pb-11 md:py-16 grid md:grid-cols-2 gap-6 md:gap-16">
+    <div className="first:pt-8 md:first:pt-16 pt-11 pb-11 md:py-16 grid md:grid-cols-2 gap-6 md:gap-16">
       <div className="flex flex-col justify-between h-full max-w-[602px]">
         <div className="">
           <h2 className="text-[24px] md:text-[32px] leading-[148%] tracking-[-0.96px] md:tracking-[-1.28px] font-medium text-mono-900">
