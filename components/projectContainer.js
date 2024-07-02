@@ -6,8 +6,8 @@ import mockup4 from "@/public/mockup4.svg";
 import mockup5 from "@/public/mockup5.svg";
 import mockup6 from "@/public/mockup6.svg";
 import mockup7 from "@/public/mockup7.svg";
-import mockup8 from "@/public/mockup8.svg";
-import mockup9 from "@/public/mockup9.svg";
+import mockup8 from "@/public/mockup8.png";
+import mockup9 from "@/public/mockup9.png";
 import mockup10 from "@/public/mockup10.svg";
 
 function ProjectContainer() {
