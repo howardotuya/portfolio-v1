@@ -43,6 +43,7 @@ function ProjectCard({ title, body, dependencies, desktop, mobile, style }) {
                 src={mobile}
                 alt=""
                 fill
+                quality={100}
               />
             </div>
 
