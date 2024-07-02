@@ -54,7 +54,7 @@ function ProjectContainer() {
         "Tiptap",
         "Preline",
       ],
-      style: "left-[-3381px] bottom-[-257px] md:bottom-[-77px]",
+      style: "left-[-3381px] bottom-[-437px] md:bottom-[-77px]",
       desktop: mockup5,
       mobile: mockup9,
     },
