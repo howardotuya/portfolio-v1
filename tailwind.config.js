@@ -11,6 +11,7 @@ module.exports = {
         inter: ["var(--font-inter)"],
         cutive: ["var(--font-cutive)"],
         nyght: ["var(--font-nyght)"],
+        kaisei: ["var(--font-kaisei)"],
       },
       colors: {
         mono: {

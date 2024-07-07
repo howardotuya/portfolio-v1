@@ -1,4 +1,4 @@
-import { Inter, Cutive_Mono } from "next/font/google";
+import { Inter, Cutive_Mono, Kaisei_Tokumin } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -8,7 +8,6 @@ const cutive = Cutive_Mono({
   weight: "400",
   variable: "--font-cutive",
 });
-
 const nyght = localFont({
   src: [
     {
@@ -19,6 +18,11 @@ const nyght = localFont({
   ],
   display: "swap",
   variable: "--font-nyght",
+});
+const kaisei = Kaisei_Tokumin({
+  subsets: ["cyrillic"],
+  variable: "--font-kaisei",
+  weight: ["700"],
 });
 
 export const metadata = {
@@ -34,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${cutive.variable} ${nyght.variable}`}
+        className={`${inter.variable} ${cutive.variable} ${nyght.variable} ${kaisei.variable}`}
       >
         {children}
       </body>

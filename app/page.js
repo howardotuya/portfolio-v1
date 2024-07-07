@@ -150,6 +150,49 @@ export default function Home() {
       </Container>
 
       <TestimonialContainer />
+
+      <Container
+        style={"bg-[#FFDAA170]"}
+        innerStyle={"py-[72px] md:py-[102.5px]"}
+      >
+        <div className="flex flex-col justify-center items-center text-center gap-8 text-[#885606]">
+          <h6 className="text-[12px] md:text-[14px] font-medium leading-[148%] tracking-[0.48px] md:tracking-[0.56px]">
+            LIMITED AVAILABILITY IN Q4, 2024
+          </h6>
+          <h2 className="max-w-[263px] md:max-w-[893px] text-[44px] md:text-[100px] leading-[110%] tracking-[-3.52px] md:tracking-[-8px] font-kaisei font-bold">
+            Let’s connect about your project
+          </h2>
+          <Link
+            className="w-full max-w-[263px] md:max-w-[407px] h-14 font-semibold tracking-[-1.28px] rounded-[10px] bg-[#885606] text-white flex justify-center items-center"
+            href={""}
+          >
+            Start a Project
+          </Link>
+        </div>
+      </Container>
+
+      {/* FOOTER */}
+      <Container style={"bg-[#885606] py-8"} innerStyle={"max-w-[1247px]"}>
+        <div className="flex flex-col justify-center items-center gap-14">
+          <ul className="text-[#FFDAA1] tracking-[-0.64px] capitalize flex gap-12">
+            <li>
+              <Link href={""}>Works</Link>
+            </li>
+            <li>
+              <Link href={""}>about</Link>
+            </li>
+            <li>
+              <Link href={""}>Contact</Link>
+            </li>
+          </ul>
+          <h1 className="text-[#FFDAA145] whitespace-nowrap font-kaisei font-bold text-[56px] md:text-[200px] leading-[64px] md:leading-[250px] tracking-[-4.48px] md:tracking-[-16px]">
+            Howard Otuya
+          </h1>
+          <h6 className="text-[#FAFAFA] tracking-[-0.64px]">
+            Kabir Anifowoshe x Howard Otuya
+          </h6>
+        </div>
+      </Container>
     </>
   );
 }
