@@ -40,6 +40,35 @@ body {
   display: none;
 }
 
+.swiper-button-prev:after {
+  display: none !important;
+}
+.swiper-button-next:after {
+  display: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative !important;
+  top: unset !important;
+  margin-top: unset !important;
+  z-index: unset !important;
+  cursor: pointer !important;
+  display: block !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+  color: unset !important;
+  right: unset !important;
+  left: unset !important;
+}
+
+.swiper-slide:nth-of-type(2) > div,
+.swiper-slide:nth-of-type(4) > div,
+.swiper-slide:nth-of-type(6) > div {
+  border: 0.5px solid #885606 !important;
+  background: rgba(255, 218, 161, 0.1) !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

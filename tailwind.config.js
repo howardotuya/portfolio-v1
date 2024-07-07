@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         cutive: ["var(--font-cutive)"],
+        nyght: ["var(--font-nyght)"],
       },
       colors: {
         mono: {

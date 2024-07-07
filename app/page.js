@@ -7,8 +7,28 @@ import mockup1 from "@/public/mockup1.svg";
 import mockup2 from "@/public/mockup2.svg";
 import ProjectCard from "@/components/projectCard";
 import ProjectContainer from "@/components/projectContainer";
+import bg2 from "@/public/bg.svg";
+import anchor from "@/public/anchor.svg";
+import TestimonialContainer from "@/components/testimonialContainer";
 
 export default function Home() {
+  const ways = [
+    {
+      title: "Pixel-Perfect Implemented Websites",
+      message:
+        "Transform designs into seamless, pixel-perfect websites that resonate with your audience and enhance your brand’s online presence.",
+    },
+    {
+      title: "Web App Development and Maintenance",
+      message:
+        "Develop robust, scalable web applications from concept to ongoing support, ensuring smooth, efficient, and secure functionality.",
+    },
+    {
+      title: "Super-Fast Delivery with Senior-Level Quality",
+      message:
+        "Experience rapid development with senior-level quality, delivering high-quality web applications quickly and efficiently.",
+    },
+  ];
   return (
     <>
       <Container innerStyle={"max-w-[1312px]"} style={"bg-[#F1EDE1]"}>
@@ -19,15 +39,15 @@ export default function Home() {
             <Link href={""}>Contact</Link>
           </nav>
 
-          <h6 className="text-[24px] leading-[32px] tracking-[-1.92px] text-[#444] lowercase">
+          <h6 className="text-[24px] font-medium leading-[32px] tracking-[-1.92px] text-[#444] lowercase">
             Howard Otuya
           </h6>
 
           <Image className="block md:hidden" src={menu} alt="" />
         </div>
 
-        <div className="mt-[117px] mt-[90px] mx-auto max-w-[890px] flex flex-col justify-center items-center">
-          <h1 className="w-full text-[40px] md:text-[90px] leading-[56px] md:leading-[100px] tracking-[-2.8px] md:tracking-[-6.3px] lowercase headerBackground">
+        <div className="mt-[117px] md:mt-[90px] mx-auto max-w-[890px] flex flex-col justify-center items-center">
+          <h1 className="w-full font-medium text-[40px] md:text-[90px] leading-[56px] md:leading-[100px] tracking-[-2.8px] md:tracking-[-6.3px] lowercase headerBackground">
             TRANSFORMING YOUR WEBSITE DREAMS INTO A DIGITAL REALITY.
           </h1>
 
@@ -44,7 +64,7 @@ export default function Home() {
 
         <div className="w-full bg-[#C1A58D] h-[1px]"></div>
 
-        <div className="mt-6 md:mb-14 mb-8 w-full h-[419px] md:h-[724px] overflow-hidden rounded-[10px]">
+        <div className="mt-11 md:mt-8 md:mb-14 mb-10 w-full h-[419px] md:h-[724px] overflow-hidden rounded-[10px]">
           <div className="w-full h-full relative grid z-[10] overflow-hidden pt-8 pl-8 md:pt-[96px] md:pl-[96px]">
             <div className="h-full w-full flex relative z-[1]">
               <Image
@@ -76,7 +96,7 @@ export default function Home() {
       </Container>
 
       <Container innerStyle={""} style={"bg-white"}>
-        <div className="pt-14 pb-10 md:pt-16 md:pb-[72px] md:text-center">
+        <div className="pt-[72px] pb-[42px] md:pt-14 md:pb-[72px] text-center">
           <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] text-[20px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.8px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
             With 5+ years of expertise in frontend development, I transform
             creative designs into flawless, user-friendly web experiences.{" "}
@@ -85,10 +105,51 @@ export default function Home() {
           </h6>
         </div>
 
-        <div className="hidden md:block bg-[#C1A58D] h-[1px] w-full"></div>
+        <div className="block bg-[#C1A58D] h-[1px] w-full"></div>
       </Container>
 
       <ProjectContainer />
+
+      <Container
+        style={"bg-[#7E5C27] relative"}
+        innerStyle={"max-w-[894px] py-8 md:py-[72px] text-center"}
+      >
+        <div className="relative z-[1] text-[20px] md:text-[44px] leading-[130%] text-[#FFDAA1] tracking-[-1.2px] md:tracking-[-2.64px]">
+          Loved by clients, team members, and agencies. Contact me today.
+        </div>
+        <Image className="object-cover object-center" src={bg2} alt="" fill />
+      </Container>
+
+      <Container style={""} innerStyle={"max-w-[1312px]"}>
+        <div className="flex flex-col md:justify-center md:items-center w-full pt-14 md:pt-16">
+          <h2 className="text-[24px] md:text-[56px] font-semibold leading-[120%] tracking-[-1.92px] md:tracking-[-4.48px] text-[#7E5C27]">
+            Ways I can help your brand
+          </h2>
+
+          <ul className="mt-8 md:mt-[78px] w-full flex flex-col md:flex-row justify-between items-center gap-6">
+            {ways.map(({ message, title }, index) => (
+              <>
+                <li key={index}>
+                  <Image src={anchor} alt="" />
+                  <h6 className="mt-11 text-[#7E5C27] font-medium text-[24px] md:text-[32px] leading-[148%] tracking-[-0.96px] md:tracking-[-1.28px]">
+                    {title}
+                  </h6>
+                  <p className="mt-4 max-w-[602px] md:text-[20px] leading-[150%] md:leading-[162.5%] tracking-[-0.48px] md:tracking-[-0.6px] text-mono-200">
+                    {message}
+                  </p>
+                </li>
+
+                <li
+                  key={title}
+                  className="h-[1px] w-full md:h-[546px] md:w-[1px] bg-[#C1A58D] last-of-type:hidden"
+                ></li>
+              </>
+            ))}
+          </ul>
+        </div>
+      </Container>
+
+      <TestimonialContainer />
     </>
   );
 }

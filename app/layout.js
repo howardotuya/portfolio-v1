@@ -1,4 +1,5 @@
 import { Inter, Cutive_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -6,6 +7,18 @@ const cutive = Cutive_Mono({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-cutive",
+});
+
+const nyght = localFont({
+  src: [
+    {
+      path: "../public/fonts/NyghtSerif-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-nyght",
 });
 
 export const metadata = {
@@ -20,7 +33,11 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cutive.variable}`}>{children}</body>
+      <body
+        className={`${inter.variable} ${cutive.variable} ${nyght.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
