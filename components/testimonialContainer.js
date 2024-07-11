@@ -109,14 +109,14 @@ function TestimonialContainer() {
           </div>
 
           <div class="mt-6 md:mt-8 swiper relative">
-            <div class="swiper-wrapper relative">
+            <div class="swiper-wrapper relative *:h-[auto_!important]">
               {testimonials.map((item, index) => (
                 <>
                   <div
                     key={index}
                     className="swiper-slide cursor-pointer max-w-[90%] md:max-w-[530px]"
                   >
-                    <div className="swiper-child bg-white rounded-[12px] py-16 px-8 md:pt-[114px] md:pb-8 md:px-14 md:w-[530px] md:min-h-[556px]">
+                    <div className="swiper-child bg-white rounded-[12px] py-16 px-8 md:pt-[114px] md:pb-8 md:px-14 md:w-[530px] h-full md:min-h-[556px]">
                       <p className="text-[16px] text-[#885606] font-medium leading-[162.5%]">
                         {item.text}
                       </p>

@@ -38,15 +38,15 @@ export default function Home() {
       <Navbar />
 
       <Container innerStyle={"max-w-[1312px]"} style={"bg-[#F1EDE1]"}>
-        <div className="mt-[93px] md:mt-[66px] mx-auto max-w-[890px] flex flex-col justify-center items-center">
+        <div className="mt-[93px] md:mt-[66px] mx-auto max-w-[963px] flex flex-col justify-center items-center">
           <h1 className="w-full font-medium text-[40px] md:text-[90px] leading-[56px] md:leading-[100px] tracking-[-2.8px] md:tracking-[-6.3px] lowercase headerBackground">
-            TRANSFORMING YOUR WEBSITE DREAMS INTO A DIGITAL REALITY.
+            transform your tech ideas & dreams into loveable digital platforms.
           </h1>
 
           <div className="mt-7 md:mt-[51px] mb-[100px] md:mb-[120px] w-full flex flex-col md:flex-row md:justify-between items-start md:items-center">
             <h6 className="max-w-[340px] text-[#3E301C] md:text-[20px] leading-[28px] tracking-[-0.8px] md:tracking-[-1px] lowercase">
-              Experience bespoke software solutions crafted with precision and
-              care.
+              experience bespoke software solutions crafted with precision and
+              care
             </h6>
             <Link
               href={routes.startProject}
