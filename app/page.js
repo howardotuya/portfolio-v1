@@ -2,7 +2,6 @@ import Container from "@/components/container";
 import Image from "next/image";
 import Link from "next/link";
 import bg from "@/public/bg2.jpg";
-import menu from "@/public/hamburger-menu.svg";
 import mockup1 from "@/public/mockup1.svg";
 import mockup2 from "@/public/mockup2.svg";
 import ProjectCard from "@/components/projectCard";
@@ -10,6 +9,9 @@ import ProjectContainer from "@/components/projectContainer";
 import bg2 from "@/public/bg.svg";
 import anchor from "@/public/anchor.svg";
 import TestimonialContainer from "@/components/testimonialContainer";
+import howardotuya from "@/public/howardotuya.svg";
+import { routes } from "@/more/routes";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   const ways = [
@@ -29,24 +31,14 @@ export default function Home() {
         "Experience rapid development with senior-level quality, delivering high-quality web applications quickly and efficiently.",
     },
   ];
+
   return (
     <>
+      <div className="h-[1px] mt-3"></div>
+      <Navbar />
+
       <Container innerStyle={"max-w-[1312px]"} style={"bg-[#F1EDE1]"}>
-        <div className="pt-9 flex w-full justify-between items-center">
-          <nav className="h-[62px] px-6 text-white rounded-[10px] hidden md:inline-flex bg-[#6F4F1E] gap-8 items-center *:tracking-[-1.28px] font-semibold">
-            <Link href={""}>Project</Link>
-            <Link href={""}>About</Link>
-            <Link href={""}>Contact</Link>
-          </nav>
-
-          <h6 className="text-[24px] font-medium leading-[32px] tracking-[-1.92px] text-[#444] lowercase">
-            Howard Otuya
-          </h6>
-
-          <Image className="block md:hidden" src={menu} alt="" />
-        </div>
-
-        <div className="mt-[117px] md:mt-[90px] mx-auto max-w-[890px] flex flex-col justify-center items-center">
+        <div className="mt-[93px] md:mt-[66px] mx-auto max-w-[890px] flex flex-col justify-center items-center">
           <h1 className="w-full font-medium text-[40px] md:text-[90px] leading-[56px] md:leading-[100px] tracking-[-2.8px] md:tracking-[-6.3px] lowercase headerBackground">
             TRANSFORMING YOUR WEBSITE DREAMS INTO A DIGITAL REALITY.
           </h1>
@@ -56,9 +48,12 @@ export default function Home() {
               Experience bespoke software solutions crafted with precision and
               care.
             </h6>
-            <button className="mt-[10px] md:mt-0 h-14 bg-[#885606] px-8 rounded-[8px] tracking-[-1.28px] font-semibold text-white">
+            <Link
+              href={routes.startProject}
+              className="hover:bg-[#6F4F1E] mt-[10px] md:mt-0 h-14 flex justify-center items-center bg-[#885606] px-8 rounded-[8px] tracking-[-1.28px] font-semibold text-white"
+            >
               Start a Project
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -95,6 +90,7 @@ export default function Home() {
         </div>
       </Container>
 
+      <span id="projects"></span>
       <Container innerStyle={""} style={"bg-white"}>
         <div className="pt-[72px] pb-[42px] md:pt-14 md:pb-[72px] text-center">
           <h6 className="md:mx-auto max-w-[562px] md:max-w-[971px] text-[20px] md:text-[40px] leading-[162.5%] md:leading-[150%] tracking-[-0.8px] md:tracking-[-1.6px] font-medium text-[#3E301C]">
@@ -163,8 +159,8 @@ export default function Home() {
             Let’s connect about your project
           </h2>
           <Link
-            className="w-full max-w-[263px] md:max-w-[407px] h-14 font-semibold tracking-[-1.28px] rounded-[10px] bg-[#885606] text-white flex justify-center items-center"
-            href={""}
+            href={routes.startProject}
+            className="hover:bg-[#6F4F1E] w-full max-w-[263px] md:max-w-[407px] h-14 font-semibold tracking-[-1.28px] rounded-[10px] bg-[#885606] text-white flex justify-center items-center"
           >
             Start a Project
           </Link>
@@ -185,9 +181,7 @@ export default function Home() {
               <Link href={""}>Contact</Link>
             </li>
           </ul>
-          <h1 className="text-[#FFDAA145] whitespace-nowrap font-kaisei font-bold text-[56px] md:text-[200px] leading-[64px] md:leading-[250px] tracking-[-4.48px] md:tracking-[-16px]">
-            Howard Otuya
-          </h1>
+          <Image src={howardotuya} alt="Howard Otuya" />
           <h6 className="text-[#FAFAFA] tracking-[-0.64px]">
             Kabir Anifowoshe x Howard Otuya
           </h6>

@@ -32,6 +32,7 @@ function TestimonialContainer() {
       },
       slidesPerView: "auto",
       navigation: true,
+      loop: true,
     });
 
     swiperRef.current = swiper;
@@ -44,7 +45,13 @@ function TestimonialContainer() {
   }, []);
   const testimonials = [
     {
-      text: "My experience with Howard was outstanding. He demonstrated great attention to detail and was professional throughout the entire process. I will always recommend Howard to anyone in need of top-notch website development.",
+      text: "Howard has been an exceptional addition to my team as a front-end dev since we started working together. His eye for good design, coupled with his mastery of his stacks allows him to create visually stunning and pixel-perfect interfaces. How he consistently goes above and beyond, delivering high-quality work under tight deadlines while exuding positive vibes all the way makes him my go-to FE any day. His contributions have been invaluable to me, and I wholeheartedly recommend him for any project or position.",
+      name: "Alex Oyebade",
+      from: "Senior Product Designer, Payaza",
+    },
+
+    {
+      text: "My experience with Howard was outstanding. Howard is a highly skilled and knowledgeable developer. He demonstrated great attention to detail and was professional throughout the entire process. I will always recommend Howard to anyone in need of top-notch website development.",
       name: "Ayomide Yemi",
       from: "Founder, Renbi women",
     },
@@ -56,7 +63,7 @@ function TestimonialContainer() {
     },
 
     {
-      text: "His dedication to the overall success of each project is truly exceptional. He pays incredible attention to detail, welcomes new ideas with enthusiasm, and always ensures that deliverables are completed well before the deadline. Howard is an absolute asset to any team!",
+      text: "I've had the pleasure of working with Howard on a few projects, and I must say his dedication to the overall success of each project is truly exceptional. As a backend engineer, I've seen firsthand how skillful he is as a frontend developer. He pays incredible attention to detail, welcomes new ideas with enthusiasm, and always ensures that deliverables are completed well before the deadline. Howard is an absolute asset to any team!",
       name: "Damilare Protocol",
       from: "Backend Engineer, Rvysion",
     },
@@ -110,7 +117,7 @@ function TestimonialContainer() {
                     className="swiper-slide cursor-pointer max-w-[90%] md:max-w-[530px]"
                   >
                     <div className="swiper-child bg-white rounded-[12px] py-16 px-8 md:pt-[114px] md:pb-8 md:px-14 md:w-[530px] md:min-h-[556px]">
-                      <p className="text-[20px] md:text-[24px] text-[#885606] font-medium leading-[148%] tracking-[-0.779px] md:tracking-[-.96px]">
+                      <p className="text-[16px] text-[#885606] font-medium leading-[162.5%]">
                         {item.text}
                       </p>
                       <div className="mt-8">

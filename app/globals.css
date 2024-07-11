@@ -6,8 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  @apply duration-300 transition-all scroll-smooth;
+}
+
 body {
-  @apply bg-[#F1EDE1] font-inter;
+  @apply bg-[#F1EDE1] font-inter box-border;
 }
 
 .setbody {
