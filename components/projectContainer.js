@@ -14,6 +14,7 @@ function ProjectContainer() {
   const items = [
     {
       title: "Idara",
+      link: "https://www.goidara.com",
       body: "Business registration and licensing in Africa made easy. We simplify regulatory complexities and help you scale your business effortlessly.",
       dependencies: [
         "Nextjs",
@@ -28,8 +29,10 @@ function ProjectContainer() {
       desktop: mockup3,
       mobile: mockup7,
     },
+
     {
       title: "Ainslee.ai",
+      link: "https://ainslee.ai",
       body: "Ainslee.ai is a specialized AI tool designed to streamline and enhance marketing and business development for users within the Live Your Message ecosystem, offering personalized and program-specific support.",
       dependencies: [
         "Nextjs",
@@ -42,8 +45,10 @@ function ProjectContainer() {
       desktop: mockup4,
       mobile: mockup8,
     },
+
     {
       title: "Renbi Women",
+      link: "https://www.renbiwomen.org",
       body: "At Renbi Women Empowerment Initiative. We empower women from disadvantage communities in Nigeria by providing them training, mentorship and financial support",
       dependencies: [
         "Nextjs",
@@ -56,8 +61,10 @@ function ProjectContainer() {
       desktop: mockup5,
       mobile: mockup9,
     },
+
     {
       title: "Alex Oyebade - Portfolio",
+      link: "https://www.alexoyebade.xyz",
       body: "Endearing users to a product through simple and delightful designs. I love how design is able to endear a business to her customers and have them hooked even at first use. This is why and how I strive to design - for endearment and retention.",
       dependencies: ["Nextjs", "Tailwindcss"],
       style: "left-[-617px] bottom-[0px] md:left-[-289px] md:bottom-[-748px]",
@@ -72,6 +79,7 @@ function ProjectContainer() {
         {items.map((item, index) => (
           <>
             <ProjectCard
+              links={item.link}
               key={index}
               title={item.title}
               body={item.body}

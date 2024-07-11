@@ -36,6 +36,7 @@ const useScrollDirection = () => {
 function Navbar() {
   const scrollDirection = useScrollDirection();
   const [navbarStyle, setNavbarStyle] = useState({ opacity: 1 });
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     if (scrollDirection === "down") {
@@ -80,7 +81,51 @@ function Navbar() {
             Howard Otuya
           </h6>
 
-          <Image className="block md:hidden" src={menu} alt="" />
+          <div className="block relative md:hidden">
+            <Image
+              className="z-[2] relative"
+              onClick={() => setIsActive(!isActive)}
+              src={menu}
+              alt=""
+            />
+            {/* <div
+              onClick={() => setIsActive(false)}
+              className={`${
+                isActive ? "flex" : "hidden"
+              } fixed z-[1] top-0 left-0 right-0 bottom-0`}
+            ></div> */}
+
+            <div
+              className={`${
+                isActive ? "flex" : "hidden"
+              } absolute mt-2 flex-col gap-5 right-0 h-auto w-[182px] z-[1000] bg-[#6F4F1E] text-white font-semibold *:tracking-[-0.96px] rounded-[10px] py-3 px-6`}
+            >
+              <Link
+                onClick={() => setIsActive(false)}
+                className="block hover:text-[#F7E5C5] hover:underline underline-offset-2"
+                href={routes.contact}
+              >
+                Contact me
+              </Link>
+              <Link
+                onClick={() => setIsActive(false)}
+                className="block hover:text-[#F7E5C5] hover:underline underline-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                download={"Howard_Otuya_resume"}
+                href={"/resume/resume.pdf"}
+              >
+                Resume
+              </Link>
+              <Link
+                onClick={() => setIsActive(false)}
+                className="block hover:text-[#F7E5C5] hover:underline underline-offset-2"
+                href={routes.projects}
+              >
+                Projects
+              </Link>
+            </div>
+          </div>
         </div>
       </Container>
     </div>

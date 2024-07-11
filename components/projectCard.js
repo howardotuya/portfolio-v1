@@ -3,15 +3,28 @@ import React from "react";
 import bg from "@/public/bg2.jpg";
 import mockup1 from "@/public/mockup1.svg";
 import mockup2 from "@/public/mockup2.svg";
+import Link from "next/link";
 
-function ProjectCard({ title, body, dependencies, desktop, mobile, style }) {
+function ProjectCard({
+  links,
+  title,
+  body,
+  dependencies,
+  desktop,
+  mobile,
+  style,
+}) {
   return (
     <div className="first:pt-8 md:first:pt-16 pt-11 pb-11 md:py-16 grid md:grid-cols-2 gap-11 md:gap-16">
       <div className="flex flex-col justify-between h-full max-w-[602px]">
         <div className="">
-          <h2 className="text-[28px] md:text-[32px] leading-[140%] md:leading-[148%] tracking-[-0.96px] md:tracking-[-1.28px] font-medium text-mono-900">
+          <Link
+            target="_blank"
+            href={links}
+            className="hover:underline text-[28px] md:text-[32px] leading-[140%] md:leading-[148%] tracking-[-0.96px] md:tracking-[-1.28px] font-medium text-mono-900"
+          >
             {title}
-          </h2>
+          </Link>
           <p className="mt-3 md:mt-4 clip3 text-mono-200 md:text-[24px] leading-[162.5%] tracking-[-0.48px] md:tracking-[-0.72px]">
             {body}
           </p>
@@ -28,7 +41,7 @@ function ProjectCard({ title, body, dependencies, desktop, mobile, style }) {
         </ul>
       </div>
 
-      <div>
+      <Link className="hover:scale-[1.03]" target="_blank" href={links}>
         <div className="w-full relative h-[419px] md:h-[560px] overflow-hidden rounded-[10px]">
           <div className="w-full h-full relative grid z-[10] overflow-hidden pt-10 pl-10 md:pt-14 md:pl-14">
             <div className="h-full w-full flex relative z-[1]">
@@ -69,7 +82,7 @@ function ProjectCard({ title, body, dependencies, desktop, mobile, style }) {
             </li>
           ))}
         </ul>
-      </div>
+      </Link>
     </div>
   );
 }
