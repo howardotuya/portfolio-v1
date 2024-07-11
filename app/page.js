@@ -172,13 +172,20 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center gap-14">
           <ul className="text-[#FFDAA1] tracking-[-0.64px] capitalize flex gap-12">
             <li>
-              <Link href={""}>Works</Link>
+              <Link href={routes.projects}>Project</Link>
             </li>
             <li>
-              <Link href={""}>about</Link>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                download={"Howard_Otuya_resume"}
+                href={"/resume/resume.pdf"}
+              >
+                Resume
+              </Link>
             </li>
             <li>
-              <Link href={""}>Contact</Link>
+              <Link href={routes.contact}>Contact</Link>
             </li>
           </ul>
           <Image src={howardotuya} alt="Howard Otuya" />
