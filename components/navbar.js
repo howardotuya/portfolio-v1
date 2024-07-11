@@ -64,7 +64,7 @@ function Navbar() {
               className="hover:text-[#F7E5C5] hover:underline underline-offset-2"
               target="_blank"
               rel="noopener noreferrer"
-              download={"Howard_Otuya_resume"}
+              // download={"Howard_Otuya_resume"}
               href={"/resume/resume.pdf"}
             >
               Resume
@@ -112,7 +112,7 @@ function Navbar() {
                 className="block hover:text-[#F7E5C5] hover:underline underline-offset-2"
                 target="_blank"
                 rel="noopener noreferrer"
-                download={"Howard_Otuya_resume"}
+                // download={"Howard_Otuya_resume"}
                 href={"/resume/resume.pdf"}
               >
                 Resume

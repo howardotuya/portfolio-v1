@@ -178,7 +178,7 @@ export default function Home() {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                download={"Howard_Otuya_resume"}
+                // download={"Howard_Otuya_resume"}
                 href={"/resume/resume.pdf"}
               >
                 Resume
