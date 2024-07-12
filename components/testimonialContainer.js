@@ -8,10 +8,7 @@ import Image from "next/image";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import "swiper/css/thumbs";
 import Swiper from "swiper";
 import { register } from "swiper/element/bundle";
 register();
@@ -20,6 +17,7 @@ function TestimonialContainer() {
   const swiperRef = useRef();
   const [beginning, setBeginning] = useState(true);
   const [end, setEnd] = useState(false);
+
   useEffect(() => {
     const swiper = new Swiper(".swiper", {
       breakpoints: {
@@ -32,7 +30,7 @@ function TestimonialContainer() {
       },
       slidesPerView: "auto",
       navigation: true,
-      loop: true,
+      loop: false,
     });
 
     swiperRef.current = swiper;
@@ -43,6 +41,7 @@ function TestimonialContainer() {
       }
     };
   }, []);
+
   const testimonials = [
     {
       text: "Howard has been an exceptional addition to my team as a front-end dev since we started working together. His eye for good design, coupled with his mastery of his stacks allows him to create visually stunning and pixel-perfect interfaces. How he consistently goes above and beyond, delivering high-quality work under tight deadlines while exuding positive vibes all the way makes him my go-to FE any day. His contributions have been invaluable to me, and I wholeheartedly recommend him for any project or position.",
@@ -70,7 +69,10 @@ function TestimonialContainer() {
   ];
 
   return (
-    <Container style={"mt-[50px] md:mt-16 mb-8 md:mb-[150px]"}>
+    <Container
+      innerStyle={"max-w-[1312px]"}
+      style={"mt-[50px] md:mt-16 mb-8 md:mb-[150px]"}
+    >
       <div>
         <div>
           <div className="flex items-center justify-between">
