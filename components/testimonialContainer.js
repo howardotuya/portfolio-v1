@@ -31,6 +31,12 @@ function TestimonialContainer() {
       slidesPerView: "auto",
       navigation: true,
       loop: false,
+      on: {
+        slideChange: () => {
+          setBeginning(swiper.isBeginning);
+          setEnd(swiper.isEnd);
+        },
+      },
     });
 
     swiperRef.current = swiper;
